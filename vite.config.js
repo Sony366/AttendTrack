@@ -1,18 +1,13 @@
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
+import babel from '@rolldown/plugin-babel'
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react({
-      // Fast Refresh (HMR) explicitly enable karne ke liye
-      fastRefresh: true,
-    }),
+    react(),
     tailwindcss(),
+    babel({ presets: [reactCompilerPreset()] })
   ],
-  server: {
-    watch: {
-      usePolling: true, // Windows file-watching fix
-    },
-  },
 })

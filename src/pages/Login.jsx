@@ -13,12 +13,11 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function Login() {
-  // Array ko component ke andar rakhein taaki Fast Refresh HMR break na ho
   const feature_Chip_information = [
     "One-Tap Attendance",
     "Attendance Analytics",
     "Subject-Wise Tracking",
-    "Class & Section Filte",
+    "Class & Section Filter",
   ];
 
   useEffect(() => {
